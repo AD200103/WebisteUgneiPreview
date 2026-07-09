@@ -1,0 +1,65 @@
+.main {
+  width: 100%;
+  height: 60vh;
+  background-color: #f57b16;
+  margin-top: 80px;
+  padding: 50px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+.main h1 {
+  font-weight: lighter;
+}
+.contactBox {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.contactBox img {
+  width: 80px;
+  height: 60px;
+}
+.secBox {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(200, 71, 28, 0.557);
+  padding: 20px;
+}
+.secBox:hover {
+  background-color: rgb(200, 71, 28);
+  cursor: pointer;
+}
+.secBox .copyIm {
+  width: 40px;
+  height: 40px;
+}
+.coppiedBox {
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease-out;
+}
+.checkCircle {
+  width: 17px;
+  height: 17px;
+}
+.ative {
+  opacity: 70%;
+}

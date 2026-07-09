@@ -51,30 +51,33 @@ const Nuotraukos = () => {
   }, []);
 
   return (
-    <div className={styles.main}>
-      <button
-        onClick={() => {
-          changeIntegerBackward();
-        }}
-      >
-        &lt;
-      </button>
+    <div className={styles.content}>
+      <h1>Atmosfera renginiuose (nuotraukos)</h1>
+      <div className={styles.main}>
+        <button
+          onClick={() => {
+            changeIntegerBackward();
+          }}
+        >
+          &lt;
+        </button>
 
-      {arr.length > 0 && (
-        <div className={styles.imgContainer}>
-          <img src={`pics/${arr[firstInteger]}`} />
-          <img className={styles.middlePic} src={`pics/${arr[integer]}`} />
-          <img src={`pics/${arr[lastInteger]}`} />
-        </div>
-      )}
+        {arr.length > 0 && (
+          <div className={styles.imgContainer}>
+            <img src={`pics/${arr[firstInteger]}`} />
+            <img className={styles.middlePic} src={`pics/${arr[integer]}`} />
+            <img src={`pics/${arr[lastInteger]}`} />
+          </div>
+        )}
 
-      <button
-        onClick={() => {
-          changeIntegerForward();
-        }}
-      >
-        &gt;
-      </button>
+        <button
+          onClick={() => {
+            changeIntegerForward();
+          }}
+        >
+          &gt;
+        </button>
+      </div>
     </div>
   );
 };

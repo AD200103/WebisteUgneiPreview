@@ -1,3 +1,24 @@
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 50px;
+  padding-bottom: 0px;
+  font-size: 1.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.content h1 {
+  display: flex;
+  align-items: center;
+}
+.content h1:before {
+  content: "";
+  display: flex;
+  width: 50px;
+  height: 15px;
+  background-color: #f57b16;
+}
 .main {
   height: 100vh;
   padding: 50px;
