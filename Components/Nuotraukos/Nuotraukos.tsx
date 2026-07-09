@@ -2,13 +2,13 @@ import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
 
 const Nuotraukos = () => {
-  const [arr, setArr] = useState([]);
-  const stringArr: string[] = [];
+  const [arr, setArr] = useState<string[]>([]);
   const [integer, setInteger] = useState(0);
   const [firstInteger, setFirstInteger] = useState(16);
   const [lastInteger, setLastInteger] = useState(integer + 1);
 
   const arrCreation = () => {
+    const stringArr: string[] = [];
     for (let i = 1; i < 18; i++) {
       stringArr.push(`foto (${i}).webp`);
     }
@@ -28,7 +28,6 @@ const Nuotraukos = () => {
       setFirstInteger(arr.length - 1);
       setLastInteger(1);
     }
-    console.log(tick);
   };
   const changeIntegerBackward = () => {
     const tick = integer - 1;
