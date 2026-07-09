@@ -51,7 +51,7 @@ const Nuotraukos = () => {
 
   return (
     <div className={styles.content}>
-      <h1>Atmosfera renginiuose (nuotraukos)</h1>
+      <h1>Atmosfera renginiuose</h1>
       <div className={styles.main}>
         <button
           onClick={() => {
