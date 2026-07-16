@@ -63,3 +63,48 @@
 .ative {
   opacity: 70%;
 }
+@media (max-width: 1024px) {
+  .main {
+    height: 50vh;
+    gap: 30px;
+    padding: 50px;
+    margin-top: 60px;
+  }
+  .secBox {
+    padding: 10px;
+  }
+  .contactBox img {
+    width: 60px;
+    height: 40px;
+  }
+  .copyIm {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 427px) {
+  .main {
+    height: 50vh;
+    gap: 30px;
+    padding: 50px;
+    width: 100%;
+  }
+  .main h1 {
+    height: 1 rem;
+  }
+  .secBox {
+    width: 320px;
+    padding: 0px;
+  }
+  .contactBox img {
+    width: 30px;
+    height: 20px;
+  }
+  .contactBox img {
+    padding: 0px;
+  }
+  .copyIm {
+    width: 20px;
+    height: 20px;
+  }
+}

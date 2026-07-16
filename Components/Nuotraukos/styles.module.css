@@ -60,3 +60,42 @@
   width: 700px !important;
   height: 600px !important;
 }
+@media (max-width: 1024px) {
+  .middlePic {
+    width: 600px !important;
+    height: 500px !important;
+  }
+  .imgContainer img {
+    width: 350px;
+    height: 300px;
+  }
+  .main {
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 500px !important;
+  }
+}
+@media (max-width: 427px) {
+  .middlePic {
+    width: 425px !important;
+    height: 410px !important;
+  }
+  .imgContainer img {
+    width: 100px;
+    height: 250px;
+  }
+  .imgContainer {
+    position: relative;
+  }
+  .main {
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 500px !important;
+  }
+  .main button {
+    width: 50px;
+    position: absolute;
+  }
+}
