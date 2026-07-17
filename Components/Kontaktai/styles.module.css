@@ -84,27 +84,30 @@
 }
 @media (max-width: 427px) {
   .main {
-    height: 50vh;
+    font-size: 1.2rem;
+    height: 55vh;
     gap: 30px;
     padding: 50px;
     width: 100%;
+    margin-top: 0px;
   }
   .main h1 {
     height: 1 rem;
+    font-size: 1.7em;
+    text-align: center;
   }
   .secBox {
     width: 320px;
-    padding: 0px;
-  }
-  .contactBox img {
-    width: 30px;
-    height: 20px;
-  }
-  .contactBox img {
-    padding: 0px;
   }
   .copyIm {
     width: 20px;
     height: 20px;
+  }
+}
+@media (max-width: 377px) {
+  .main {
+    padding-right: 0;
+    padding-left: 0;
+    align-items: center;
   }
 }

@@ -55,6 +55,17 @@
 }
 @media (max-width: 427px) {
   .menuList {
-    font-size: 0.3rem;
+    flex-direction: column;
+  }
+  .logo {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 10px;
+    right: 0px;
+  }
+  .virselis {
+    object-fit: cover;
+    height: 100vh;
   }
 }

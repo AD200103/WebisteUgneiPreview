@@ -93,3 +93,12 @@
     flex-direction: column;
   }
 }
+@media (max-width: 377px) {
+  .main {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .labasBox img {
+    width: 375px;
+  }
+}
