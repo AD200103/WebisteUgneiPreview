@@ -155,9 +155,7 @@
     width: 140px;
   }
 }
-@media (max-width: 412px){
 
-}
 @media (max-width: 377px) {
   .contentBox > .serviceBox:nth-child(3) h3 {
     width: 80px;
