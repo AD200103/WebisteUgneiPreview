@@ -70,9 +70,9 @@
     width: 100%;
     padding: 0px;
     padding-top:40px;
-    padding-bottom:50px;
+    padding-bottom:0px;
+        margin-bottom:50px;
     height: 225vh;
-    
   }
   .main p{
     padding-left:50px;
@@ -118,7 +118,7 @@
 @media (max-width: 322px) {
 
   .main {
-    height: 250vh;
+    height: 240vh;
   }
   .textBox p{
     padding-left: 20px;
