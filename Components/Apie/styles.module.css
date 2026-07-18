@@ -68,10 +68,16 @@
 @media (max-width: 427px) {
   .main {
     width: 100%;
-    padding: 50px;
+    padding: 0px;
+    padding-top:40px;
+    padding-bottom:50px;
     height: 225vh;
+    margin-bottom:50px;
   }
-
+  .main p{
+    padding-left:50px;
+    padding-right:50px;
+  }
   .labasBox {
     gap: 50px;
     flex-direction: column-reverse;
@@ -80,7 +86,6 @@
   .labasBox img{
     width: 100%;
   }
-  
   
   .textBox,
   .idejaAtmosferaBox .textBox {
