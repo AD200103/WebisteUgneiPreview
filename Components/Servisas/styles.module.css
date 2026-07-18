@@ -103,8 +103,13 @@
 }
 
 @media (max-width: 427px) {
+  .main {
+    height:unset;
+    padding:0;
+  }
   .titleAndGrid {
-    padding: 8px;
+    padding-top:3rem;
+    padding-bottom:3rem;
   }
   .titleAndGrid h1 {
     margin-bottom: 40px;
@@ -124,9 +129,7 @@
   .main .ball {
     display: none;
   }
-  .main {
-    height: 76vh;
-  }
+ 
   .sectPicAndDescBox {
     width: 100%;
     height: 100%;

@@ -69,10 +69,9 @@
   .main {
     width: 100%;
     padding: 0px;
-    padding-top:40px;
-    padding-bottom:0px;
-        margin-bottom:50px;
-    height: 225vh;
+    padding-top:3rem;
+    padding-bottom:3rem;
+    height: unset;
   }
   .main p{
     padding-left:50px;
@@ -116,10 +115,6 @@
   }
 }
 @media (max-width: 322px) {
-
-  .main {
-    height: 240vh;
-  }
   .textBox p{
     padding-left: 20px;
     padding-right:20px;
