@@ -169,3 +169,17 @@
     padding: 5px;
   }
 }
+@media (max-width: 322px) {
+.contentBox {
+    gap: 20px;
+   column-gap: 0px;
+  }
+  .main .serviceIcon {
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .serviceBox {
+    width: 40px;
+  }
+
+}

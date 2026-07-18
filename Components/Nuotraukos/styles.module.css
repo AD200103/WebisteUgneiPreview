@@ -89,11 +89,15 @@
   .content h1 {
     font-size: 1.7em;
   }
+  .imgContainer {
+    width: 100%;
+  }
   .middlePic {
-    width: 426px !important;
+    width: 100.2% !important;
     height: 410px !important;
     z-index: 0;
   }
+  
   .imgContainer img {
     width: 0px;
     height: 250px;
@@ -102,7 +106,7 @@
     position: relative;
   }
   .main {
-    padding: 20px;
+    padding: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
     height: 500px !important;
@@ -125,15 +129,7 @@
   }
 }
 @media (max-width: 377px) {
-  .imgContainer {
-    width: 100%;
-  }
-  .middlePic {
-    width: 100.2% !important;
-    height: 410px !important;
-    z-index: 0;
-  }
-  .main {
-    padding: 0px;
-  }
+ 
+
+
 }

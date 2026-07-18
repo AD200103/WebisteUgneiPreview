@@ -101,4 +101,21 @@
   .labasBox img {
     width: 375px;
   }
+  .textBox p{
+    padding-left: 20px;
+    padding-right:20px;
+  }
+}
+@media (max-width: 322px) {
+
+  .main {
+    height: 250vh;
+  }
+  .labasBox img {
+    width: 320px;
+  }
+  .textBox p{
+    padding-left: 20px;
+    padding-right:20px;
+  }
 }
