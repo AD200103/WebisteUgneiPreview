@@ -139,6 +139,7 @@
   .contentBox {
     gap: 20px;
     row-gap: 70px;
+    column-gap:0px;
   }
   .contentBox h3 {
     font-size: 1.2rem;
@@ -153,6 +154,9 @@
   .contentBox > .serviceBox:nth-child(2) h3 {
     width: 140px;
   }
+}
+@media (max-width: 412px){
+
 }
 @media (max-width: 377px) {
   .contentBox > .serviceBox:nth-child(3) h3 {
