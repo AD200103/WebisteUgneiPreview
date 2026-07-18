@@ -87,7 +87,9 @@
     font-size: 1.2rem;
     height: 55vh;
     gap: 30px;
-    padding: 50px;
+    padding:0px;
+    padding-top: 50px;
+    align-items:center;
     width: 100%;
     margin-top: 0px;
   }
@@ -95,6 +97,9 @@
     height: 1 rem;
     font-size: 1.7em;
     text-align: center;
+    width:100%;
+    padding-right:50px;
+    padding-left:50px;
   }
   .secBox {
     width: 320px;
