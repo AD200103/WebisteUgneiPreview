@@ -19,7 +19,7 @@ const Servisas = () => {
                 className={styles.serviceIcon}
                 src="/servicePics/finance.svg"
               />
-              <h3>Planavimas ir biudžetas</h3>
+              <h3>Planavimas ir <br/>biudžetas</h3>
             </div>
             <div className={styles.serviceBox}>
               <img
@@ -40,7 +40,7 @@ const Servisas = () => {
                 className={styles.serviceIcon}
                 src="/servicePics/directions.svg"
               />
-              <h3>Renginio koordinavimas</h3>
+              <h3>Renginio  <br/>koordinavimas</h3>
             </div>
           </div>
         </div>

@@ -14,6 +14,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 80px;
+  place-items:center;
+  width:100%;
 }
 .contentBox > .serviceBox:nth-child(3) {
   grid-column: 2;
@@ -49,6 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
   width: 150px;
   font-size: 1.1rem;
@@ -108,20 +111,34 @@
     padding:0;
   }
   .titleAndGrid {
-    padding-top:3rem;
-    padding-bottom:3rem;
+    padding:3rem;
   }
   .titleAndGrid h1 {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .main .serviceIcon {
     height: 50px;
     width: 50px;
   }
   .serviceBox {
-    width: 100px;
+    width: 100%;
+    flex-direction: row;
+    background-color: #d06d1c;
+    padding:10px;
+    justify-content: space-between;
   }
+  
+  .serviceBox img{
+    background-color: #d58646;
+    padding:5px
+  }
+.serviceBox h3{
+  width:100%;
+text-align: center;
+padding-left: 5px;
+padding-right: 5px;
 
+}
   .main .serviceIcon {
     height: 80px !important;
     width: 80px !important;
@@ -129,7 +146,18 @@
   .main .ball {
     display: none;
   }
- 
+ .contentBox > .serviceBox:nth-child(3) {
+  grid-column: unset;
+  grid-row: unset;
+  width:100%;
+  justify-content: space-between;
+}
+.contentBox > .serviceBox:nth-child(3) h3 {
+   width:100%;
+text-align: center;
+padding-left: 5px;
+padding-right: 5px;
+}
   .sectPicAndDescBox {
     width: 100%;
     height: 100%;
@@ -140,51 +168,31 @@
     align-items: center;
   }
   .contentBox {
-    gap: 20px;
-    row-gap: 70px;
-    column-gap:0px;
+    grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+   gap: 20px
+  
   }
+
   .contentBox h3 {
     font-size: 1.2rem;
-  }
-  .contentBox > .serviceBox:nth-child(3) {
-    width: 125px;
-    margin-right: 15px;
-  }
-  .contentBox > .serviceBox:nth-child(3) h3 {
-    width: 180px;
-  }
-  .contentBox > .serviceBox:nth-child(2) h3 {
-    width: 140px;
   }
 }
 
 @media (max-width: 377px) {
-  .contentBox > .serviceBox:nth-child(3) h3 {
-    width: 80px;
-  }
-  .contentBox > .serviceBox:nth-child(2) h3 {
-    width: 80px;
-  }
   .contentBox {
-    gap: 0px;
-    row-gap: 70px;
+    margin:0;
   }
-  .titleAndGrid {
-    padding: 5px;
-  }
+ 
 }
 @media (max-width: 322px) {
 .contentBox {
     gap: 20px;
    column-gap: 0px;
   }
-  .main .serviceIcon {
-    height: 40px !important;
-    width: 40px !important;
-  }
-  .serviceBox {
-    width: 40px;
-  }
+.titleAndGrid {
+    padding-left:1rem;
+        padding-right:1rem;
 
+  }
 }
