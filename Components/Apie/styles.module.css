@@ -65,7 +65,7 @@
     text-align: left;
   }
 }
-@media (max-width: 427px) {
+@media (max-width: 431px) {
   .main {
     width: 100%;
     height: unset;
