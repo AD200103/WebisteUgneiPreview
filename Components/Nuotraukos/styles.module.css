@@ -1,12 +1,10 @@
 .content {
   font-family: Arial, Helvetica, sans-serif;
   padding: 50px;
-  padding-bottom: 0px;
   font-size: 1.5rem;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap:30px;
 }
 .content h1 {
   display: flex;
@@ -20,12 +18,12 @@
   background-color: #f57b16;
 }
 .main {
-  height: 100vh;
   padding: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+   position: relative;
 }
 .main button {
   all: unset;
@@ -43,8 +41,10 @@
 }
 .imgContainer {
   display: flex;
-  position: relative;
   gap: 100px;
+  padding-top:3rem;
+  padding-bottom:3rem;
+
 }
 .imgContainer img {
   width: 500px;
@@ -74,6 +74,9 @@
     padding-top: 0px;
     padding-bottom: 0px;
   }
+  .content h1{
+     margin-bottom:50px;
+  }
 }
 @media (max-width: 427px) {
   .content {
@@ -88,10 +91,14 @@
 
   .content h1 {
     font-size: 1.7em;
+    margin-bottom: 0px;
   }
   .imgContainer {
     width: 100%;
+     padding-top:0;
+  padding-bottom:0;
   }
+
   .middlePic {
     width: 100% !important;
     height: 410px !important;
@@ -127,8 +134,4 @@
     width: 35px;
   }
 }
-@media (max-width: 377px) {
- 
 
-
-}
