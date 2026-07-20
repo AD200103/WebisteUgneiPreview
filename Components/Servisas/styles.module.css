@@ -14,8 +14,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 80px;
-  place-items:center;
-  width:100%;
+  place-items: center;
+  width: 100%;
+  column-gap: 0px;
 }
 .contentBox > .serviceBox:nth-child(3) {
   grid-column: 2;
@@ -76,26 +77,38 @@
   margin-bottom: 10px;
 }
 @media (max-width: 1024px) {
+  .main {
+    height: fit-content;
+  }
   .titleAndGrid h1 {
-    margin-bottom: 15px;
+    margin-bottom: 50px;
+  }
+  .titleAndGrid {
+    width: 50%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .serviceBox {
-    width: 150px;
+    width: fit-content;
   }
   .main .serviceIcon {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
   }
   .main .ball {
-    width: 500px;
-    height: 500px;
+    width: 50%;
+    height: 50%;
   }
+
   .contentBox {
-    gap: 40px;
+    row-gap: 40px !important;
+    gap: 9%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .sectPicAndDescBox {
-    border-top-left-radius: 250px;
-    border-bottom-left-radius: 250px;
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
   }
   .contentBox > .serviceBox:nth-child(3) {
     width: 125px;
@@ -104,35 +117,25 @@
     width: 180px;
   }
 }
-@media (max-width:768px){
-  .main .ball {
-  width: 350px;
-  height: 350px;
-}
-.serviceBox {
-    width: 130px;
-  }
-.sectPicAndDescBox {
+@media (max-width: 768px) {
+  .sectPicAndDescBox {
     border-top-left-radius: 175px;
     border-bottom-left-radius: 175px;
   }
-  .contentBox {
-    gap: 0px;
+  .contentBox h3 {
+    font-size: 1.1rem;
   }
-  .contentBox h3{
-    font-size:1.1rem;
-  }
-.main .serviceIcon {
+  .main .serviceIcon {
     height: 75px;
     width: 75px;
   }
 }
 @media (max-width: 431px) {
   .main {
-    height:unset;
+    height: unset;
   }
   .titleAndGrid {
-    padding:3rem;
+    padding: 3rem;
   }
   .titleAndGrid h1 {
     margin-bottom: 25px;
@@ -145,21 +148,20 @@
     width: 100%;
     flex-direction: row;
     background-color: #d06d1c;
-    padding:10px;
+    padding: 10px;
     justify-content: space-between;
   }
-  
-  .serviceBox img{
-    background-color: #d58646;
-    padding:5px
-  }
-.serviceBox h3{
-  width:100%;
-text-align: center;
-padding-left: 5px;
-padding-right: 5px;
 
-}
+  .serviceBox img {
+    background-color: #d58646;
+    padding: 5px;
+  }
+  .serviceBox h3 {
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .main .serviceIcon {
     height: 80px !important;
     width: 80px !important;
@@ -167,18 +169,18 @@ padding-right: 5px;
   .main .ball {
     display: none;
   }
- .contentBox > .serviceBox:nth-child(3) {
-  grid-column: unset;
-  grid-row: unset;
-  width:100%;
-  justify-content: space-between;
-}
-.contentBox > .serviceBox:nth-child(3) h3 {
-   width:100%;
-text-align: center;
-padding-left: 5px;
-padding-right: 5px;
-}
+  .contentBox > .serviceBox:nth-child(3) {
+    grid-column: unset;
+    grid-row: unset;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .contentBox > .serviceBox:nth-child(3) h3 {
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
   .sectPicAndDescBox {
     width: 100%;
     height: 100%;
@@ -190,9 +192,8 @@ padding-right: 5px;
   }
   .contentBox {
     grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-   gap: 20px
-  
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
   }
 
   .contentBox h3 {
@@ -202,18 +203,16 @@ padding-right: 5px;
 
 @media (max-width: 377px) {
   .contentBox {
-    margin:0;
+    margin: 0;
   }
- 
 }
 @media (max-width: 322px) {
-.contentBox {
+  .contentBox {
     gap: 20px;
-   column-gap: 0px;
+    column-gap: 0px;
   }
-.titleAndGrid {
-    padding-left:1rem;
-        padding-right:1rem;
-
+  .titleAndGrid {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

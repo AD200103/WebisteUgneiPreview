@@ -4,7 +4,7 @@
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
 }
 .content h1 {
   display: flex;
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-   position: relative;
+  position: relative;
 }
 .main button {
   all: unset;
@@ -42,9 +42,8 @@
 .imgContainer {
   display: flex;
   gap: 100px;
-  padding-top:3rem;
-  padding-bottom:3rem;
-
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .imgContainer img {
   width: 500px;
@@ -74,29 +73,28 @@
     padding-top: 0px;
     padding-bottom: 0px;
   }
-  .content h1{
-     margin-bottom:50px;
+  .content h1 {
+    margin-bottom: 50px;
   }
 }
-@media (max-width:768px){
+@media (max-width: 768px) {
   .middlePic {
     width: 550px !important;
     height: 500px !important;
   }
-   .imgContainer img {
+  .imgContainer img {
     width: 300px;
   }
-  
 }
 @media (max-width: 431px) {
   .content {
     font-size: 1.2rem;
     gap: 20px;
-    padding:0px;
+    padding: 0px;
     padding-bottom: 3rem;
     padding-top: 3rem;
     z-index: 0;
-    height:fit-content;
+    height: fit-content;
   }
 
   .content h1 {
@@ -105,27 +103,28 @@
   }
   .imgContainer {
     width: 100%;
-     padding-top:0;
-  padding-bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .middlePic {
     width: 100% !important;
     height: 410px !important;
     z-index: 0;
-    position:unset;
-    transform:unset
+    position: unset;
+    transform: unset;
   }
-  
-  .imgContainer img:nth-child(1), .imgContainer img:nth-child(3) {
-    display:none;
+
+  .imgContainer img:nth-child(1),
+  .imgContainer img:nth-child(3) {
+    display: none;
   }
   .imgContainer {
     position: relative;
   }
   .main {
     padding: 0px;
-    height:unset;
+    height: unset;
   }
   .main button:nth-child(1),
   .main button:nth-child(2) {
@@ -144,4 +143,3 @@
     width: 35px;
   }
 }
-
