@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding:50px;
+  padding: 50px;
   position: relative;
-  padding-top:3rem;
-  width:100%;
-  padding-bottom:3rem;
+  padding-top: 3rem;
+  width: 100%;
+  padding-bottom: 3rem;
 }
 .labasBox {
   display: flex;
@@ -22,14 +22,16 @@
 }
 
 .idejaAtmosferaBox img {
-  width: 650px;
-  height: 380px;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
   object-fit: cover;
   align-self: flex-end;
 }
 .labasBox img {
-  width: 400px;
-  height: 300px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 .main h1:before {
   content: "";
@@ -41,7 +43,7 @@
 .main h1 {
   display: flex;
   align-items: center;
-   width:100%
+  width: 100%;
 }
 .textBox {
   font-size: 1.5rem;
@@ -50,17 +52,12 @@
   text-align: justify;
 }
 @media (max-width: 1024px) {
-  .labasBox img {
-    width: 330px;
-    height: 270px;
-  }
   .textBox {
     font-size: 1.2rem;
   }
   .idejaAtmosferaBox img {
     max-width: 500px;
     height: 270px;
-    
   }
   .main h1 {
     font-size: 1.7em;
@@ -69,35 +66,32 @@
 }
 @media (max-width: 768px) {
   .idejaAtmosferaBox {
-    width:100%;
+    width: 100%;
   }
-  .textBox h1{
-    width:100%
+  .textBox h1 {
+    width: 100%;
   }
-
 }
-@media (max-width: 431px) {
+@media (max-width: 568px) {
   .main {
     width: 100%;
     height: unset;
-    padding:0;
-     padding-top:3rem;
-  padding-bottom:3rem;
-
+    padding: 0rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
-  .main p{
-    padding-left:50px;
-    padding-right:50px;
+  .main p {
+    padding-left: 50px;
+    padding-right: 50px;
   }
   .labasBox {
     gap: 50px;
     flex-direction: column-reverse;
     width: 100%;
   }
-  .labasBox img{
-    width: 100%;
+  .labasBox img {
+    align-self: center;
   }
-  
   .textBox,
   .idejaAtmosferaBox .textBox {
     width: 100%;
@@ -106,14 +100,15 @@
     width: 100%;
     height: 280px;
     margin-bottom: 0px;
+    align-self: center;
   }
   .textBox p {
     width: 100%;
   }
   .idejaAtmosferaBox {
     flex-direction: column;
-    width:100%;
-    margin-top:0px;
+    width: 100%;
+    margin-top: 0px;
   }
 }
 @media (max-width: 377px) {
@@ -121,15 +116,9 @@
     padding-right: 0;
     padding-left: 0;
   }
-  
-  .textBox p{
+
+  .textBox p {
     padding-left: 20px;
-    padding-right:20px;
-  }
-}
-@media (max-width: 322px) {
-  .textBox p{
-    padding-left: 20px;
-    padding-right:20px;
+    padding-right: 20px;
   }
 }

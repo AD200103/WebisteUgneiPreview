@@ -84,16 +84,15 @@
     margin-bottom: 50px;
   }
   .titleAndGrid {
-    width: 50%;
     padding-top: 20px;
     padding-bottom: 20px;
   }
   .serviceBox {
-    width: fit-content;
+    width: 150px;
   }
   .main .serviceIcon {
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90px;
   }
   .main .ball {
     width: 50%;
@@ -103,8 +102,6 @@
   .contentBox {
     row-gap: 40px !important;
     gap: 9%;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .sectPicAndDescBox {
     border-top-left-radius: 9999px;
@@ -130,7 +127,7 @@
     width: 75px;
   }
 }
-@media (max-width: 431px) {
+@media (max-width: 568px) {
   .main {
     height: unset;
   }
