@@ -73,7 +73,7 @@
   flex-shrink: 0;
 }
 .middleSectionPics img {
-  flex: 0 0 700px;
+  flex: 0 0 100%;
   width: 700px;
   height: 600px;
   object-fit: cover;
