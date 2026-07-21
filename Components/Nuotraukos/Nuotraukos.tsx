@@ -101,9 +101,9 @@ const Nuotraukos = () => {
               className={styles.middleSectionPics}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
-              onTouchMove={handleTouchMove}
             >
               <div
+                onTouchMove={handleTouchMove}
                 className={styles.track}
                 style={{
                   transform: `translateX(${dragX}px)`,
