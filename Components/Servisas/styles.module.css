@@ -127,7 +127,7 @@
     width: 75px;
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 668px) {
   .main {
     height: unset;
   }

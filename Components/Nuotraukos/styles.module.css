@@ -86,7 +86,7 @@
     width: 300px;
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 668px) {
   .content {
     font-size: 1.2rem;
     gap: 20px;

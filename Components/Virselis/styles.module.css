@@ -53,7 +53,7 @@
     font-size: 1.3rem;
   }
 }
-@media (max-width: 568px) {
+@media (max-width: 668px) {
   .virselis {
     filter: brightness(60%);
   }
