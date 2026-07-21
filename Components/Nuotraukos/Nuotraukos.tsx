@@ -10,6 +10,7 @@ const Nuotraukos = () => {
   const [dragX, setDragX] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [dragging, setDragging] = useState(false);
+  const [slideWidth, setSlideWidth] = useState(0);
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (touchStart === null) return;
@@ -61,7 +62,6 @@ const Nuotraukos = () => {
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStart === null) return;
-    const slideWidth = middleSectionRef.current?.offsetWidth ?? 0;
     const touchEnd = e.changedTouches[0].clientX;
     const difference = touchStart - touchEnd;
     const minSwipeDistance = 50;
@@ -88,12 +88,17 @@ const Nuotraukos = () => {
 
   useEffect(() => {
     arrCreation();
-
     for (let i = 1; i < 18; i++) {
       const img = new Image();
       img.src = `pics/foto (${i}).webp`;
     }
   }, []);
+
+  useEffect(() => {
+    if (middleSectionRef.current) {
+      setSlideWidth(middleSectionRef.current.offsetWidth);
+    }
+  }, [arr]);
 
   return (
     <div className={styles.content}>
@@ -121,7 +126,7 @@ const Nuotraukos = () => {
               <div
                 className={styles.track}
                 style={{
-                  transform: `translateX(${-700 + dragX}px)`,
+                  transform: `translateX(${-slideWidth + dragX}px)`,
                   transition: dragging ? "none" : "transform 0.3s ease",
                 }}
               >
