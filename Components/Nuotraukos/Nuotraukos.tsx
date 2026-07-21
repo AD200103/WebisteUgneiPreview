@@ -130,7 +130,9 @@ const Nuotraukos = () => {
               <div
                 className={styles.track}
                 style={{
-                  transform: `translateX(${-slideWidth + dragX}px)`,
+                  transform: `translateX(${
+                    slideWidth ? -slideWidth + dragX : 0
+                  }px)`,
                   transition: dragging ? "none" : "transform 0.3s ease",
                 }}
               >
