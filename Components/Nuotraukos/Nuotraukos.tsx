@@ -1,7 +1,8 @@
 import styles from "./styles.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Nuotraukos = () => {
+  const middleSectionRef = useRef<HTMLDivElement>(null);
   const [arr, setArr] = useState<string[]>([]);
   const [integer, setInteger] = useState(0);
   const [firstInteger, setFirstInteger] = useState(16);
@@ -60,7 +61,7 @@ const Nuotraukos = () => {
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStart === null) return;
-    const slideWidth = 700;
+    const slideWidth = middleSectionRef.current?.offsetWidth ?? 0;
     const touchEnd = e.changedTouches[0].clientX;
     const difference = touchStart - touchEnd;
     const minSwipeDistance = 50;
@@ -111,6 +112,7 @@ const Nuotraukos = () => {
             <img src={`pics/${arr[firstInteger]}`} />
 
             <div
+              ref={middleSectionRef}
               className={styles.middleSectionPics}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
