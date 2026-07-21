@@ -14,7 +14,7 @@ const Virselis = () => {
         <li className={styles.menuDot}></li>
         <li>RENGINIŲ REŽISŪRA</li>
         <li className={styles.menuDot}></li>
-        <li>KOORDINAVIMAS</li>
+        <li>RENGINIŲ KOORDINAVIMAS</li>
         <li className={styles.menuDot}></li>
         <li>PATIKIMI PARTNERIAI</li>
       </ul>

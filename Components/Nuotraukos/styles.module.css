@@ -58,8 +58,13 @@
   position: absolute;
   width: 700px !important;
   height: 600px !important;
+  object-fit: cover;
 }
+
 @media (max-width: 1024px) {
+  .content h1 {
+    padding-left: 50px;
+  }
   .middlePic {
     width: 580px !important;
     height: 500px !important;
@@ -67,6 +72,10 @@
   .imgContainer img {
     width: 300px;
     height: 300px;
+  }
+  .content {
+    padding-left: 0;
+    padding-right: 0;
   }
   .main {
     padding: 0px;
@@ -79,11 +88,11 @@
 }
 @media (max-width: 768px) {
   .middlePic {
-    width: 550px !important;
+    width: 530px !important;
     height: 500px !important;
   }
   .imgContainer img {
-    width: 300px;
+    width: 280px;
   }
 }
 @media (max-width: 668px) {
@@ -100,6 +109,7 @@
   .content h1 {
     font-size: 1.7em;
     margin-bottom: 0px;
+    padding-left: 0px;
   }
   .imgContainer {
     width: 100%;
