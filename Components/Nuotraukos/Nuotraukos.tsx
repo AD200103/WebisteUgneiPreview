@@ -8,6 +8,7 @@ const Nuotraukos = () => {
   const [lastInteger, setLastInteger] = useState(integer + 1);
   const [dragX, setDragX] = useState(0);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [dragging, setDragging] = useState(false);
 
   const handleTouchMove = (e: React.TouchEvent) => {
     if (touchStart === null) return;
@@ -54,22 +55,24 @@ const Nuotraukos = () => {
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
+    setDragging(true);
     setTouchStart(e.touches[0].clientX);
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStart === null) return;
+
     const touchEnd = e.changedTouches[0].clientX;
     const difference = touchStart - touchEnd;
     const minSwipeDistance = 50;
     if (difference > minSwipeDistance) {
-      // Swiped left → next photo
       changeIntegerForward();
     }
     if (difference < -minSwipeDistance) {
-      // Swiped right → previous photo
       changeIntegerBackward();
     }
+    setDragging(false);
     setTouchStart(null);
+    setDragX(0);
   };
 
   useEffect(() => {
@@ -101,12 +104,13 @@ const Nuotraukos = () => {
               className={styles.middleSectionPics}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
+              onTouchMove={handleTouchMove}
             >
               <div
-                onTouchMove={handleTouchMove}
                 className={styles.track}
                 style={{
-                  transform: `translateX(${dragX}px)`,
+                  transform: `translateX(${-700 + dragX}px)`,
+                  transition: dragging ? "none" : "transform 0.3s ease",
                 }}
               >
                 <img src={`pics/${arr[firstInteger]}`} />
