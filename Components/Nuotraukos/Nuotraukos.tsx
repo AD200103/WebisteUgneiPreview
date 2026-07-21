@@ -6,6 +6,15 @@ const Nuotraukos = () => {
   const [integer, setInteger] = useState(0);
   const [firstInteger, setFirstInteger] = useState(16);
   const [lastInteger, setLastInteger] = useState(integer + 1);
+  const [dragX, setDragX] = useState(0);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const currentX = e.touches[0].clientX;
+    setDragX(currentX - touchStart);
+    setDragX(0);
+  };
 
   const arrCreation = () => {
     const stringArr: string[] = [];
@@ -44,8 +53,6 @@ const Nuotraukos = () => {
       setLastInteger(0);
     }
   };
-
-  const [touchStart, setTouchStart] = useState<number | null>(null);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.touches[0].clientX);
@@ -88,13 +95,30 @@ const Nuotraukos = () => {
         </button>
 
         {arr.length > 0 && (
-          <div
-            className={styles.imgContainer}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
+          <div className={styles.imgContainer}>
             <img src={`pics/${arr[firstInteger]}`} />
-            <img className={styles.middlePic} src={`pics/${arr[integer]}`} />
+
+            <div
+              className={styles.middleSectionPics}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+              onTouchMove={handleTouchMove}
+            >
+              <div
+                className={styles.track}
+                style={{
+                  transform: `translateX(${dragX}px)`,
+                }}
+              >
+                <img src={`pics/${arr[firstInteger]}`} />
+                <img
+                  className={styles.middlePic}
+                  src={`pics/${arr[integer]}`}
+                />
+                <img src={`pics/${arr[lastInteger]}`} />
+              </div>
+            </div>
+
             <img src={`pics/${arr[lastInteger]}`} />
           </div>
         )}
