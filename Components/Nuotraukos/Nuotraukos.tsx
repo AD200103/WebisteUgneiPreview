@@ -47,6 +47,11 @@ const Nuotraukos = () => {
 
   useEffect(() => {
     arrCreation();
+
+    for (let i = 1; i < 18; i++) {
+      const img = new Image();
+      img.src = `pics/foto (${i}).webp`;
+    }
   }, []);
 
   return (
