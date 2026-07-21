@@ -124,6 +124,9 @@
     width: 100px;
     height: 100px;
   }
+  .titleAndGrid h1 {
+    margin-bottom: 30px;
+  }
   .contentBox {
     gap: 6%;
   }
@@ -133,15 +136,25 @@
 }
 
 @media (max-width: 768px) {
-  .contentBox h3 {
-    font-size: 1.1rem;
-  }
   .main .serviceIcon {
     height: 75px;
     width: 75px;
   }
+  .contentBox {
+    gap: 1%;
+  }
 }
 @media (max-width: 668px) {
+  .serviceBox img,
+  .serviceBox,
+  .serviceBox h3 {
+    width: unset;
+    height: unset;
+  }
+  .contentBox h3 {
+    font-size: 1.3rem;
+  }
+
   .main {
     height: unset;
   }
