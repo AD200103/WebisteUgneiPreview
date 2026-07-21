@@ -1,5 +1,7 @@
 import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const Nuotraukos = () => {
   const [arr, setArr] = useState<string[]>([]);
@@ -94,7 +96,11 @@ const Nuotraukos = () => {
             onTouchEnd={handleTouchEnd}
           >
             <img src={`pics/${arr[firstInteger]}`} />
-            <img className={styles.middlePic} src={`pics/${arr[integer]}`} />
+            <div className={styles.middleSection}>
+              <img src={`pics/${arr[firstInteger]}`} />
+              <img src={`pics/${arr[integer]}`} />
+              <img src={`pics/${arr[lastInteger]}`} />
+            </div>
             <img src={`pics/${arr[lastInteger]}`} />
           </div>
         )}
