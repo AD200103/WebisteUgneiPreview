@@ -60,19 +60,29 @@ const Nuotraukos = () => {
   };
   const handleTouchEnd = (e: React.TouchEvent) => {
     if (touchStart === null) return;
-
+    const slideWidth = 700;
     const touchEnd = e.changedTouches[0].clientX;
     const difference = touchStart - touchEnd;
     const minSwipeDistance = 50;
     if (difference > minSwipeDistance) {
-      changeIntegerForward();
+      setDragging(false); // enable CSS transition
+      setDragX(-slideWidth); // animate to the next slide
+      setTimeout(() => {
+        changeIntegerForward();
+        setDragging(true); // disable transition temporarily
+        setDragX(0); // snap track back to center
+      }, 300);
     }
     if (difference < -minSwipeDistance) {
-      changeIntegerBackward();
+      setDragging(false);
+      setDragX(slideWidth);
+      setTimeout(() => {
+        changeIntegerBackward();
+        setDragging(true);
+        setDragX(0);
+      }, 300);
     }
-    setDragging(false);
     setTouchStart(null);
-    setDragX(0);
   };
 
   useEffect(() => {
