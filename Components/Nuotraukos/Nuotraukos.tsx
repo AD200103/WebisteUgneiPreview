@@ -13,7 +13,6 @@ const Nuotraukos = () => {
     if (touchStart === null) return;
     const currentX = e.touches[0].clientX;
     setDragX(currentX - touchStart);
-    setDragX(0);
   };
 
   const arrCreation = () => {
