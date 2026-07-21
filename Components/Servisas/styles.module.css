@@ -86,9 +86,10 @@
   .titleAndGrid {
     padding-top: 20px;
     padding-bottom: 20px;
+    max-width: 50%;
   }
   .serviceBox {
-    width: 150px;
+    width: 120px;
   }
   .main .serviceIcon {
     height: 90px;
@@ -96,29 +97,27 @@
   }
   .main .ball {
     width: 50%;
-    height: 50%;
+    height: 100%;
   }
-
   .contentBox {
     row-gap: 40px !important;
-    gap: 8%;
+    gap: 6%;
   }
   .sectPicAndDescBox {
     border-top-left-radius: 9999px;
     border-bottom-left-radius: 9999px;
   }
+  .contentBox h3 {
+    font-size: 1.1rem;
+  }
   .contentBox > .serviceBox:nth-child(3) {
-    width: 125px;
+    width: 100px;
   }
   .contentBox > .serviceBox:nth-child(3) h3 {
     width: 180px;
   }
 }
 @media (max-width: 768px) {
-  .sectPicAndDescBox {
-    border-top-left-radius: 175px;
-    border-bottom-left-radius: 175px;
-  }
   .contentBox h3 {
     font-size: 1.1rem;
   }
@@ -133,6 +132,7 @@
   }
   .titleAndGrid {
     padding: 3rem;
+    max-width: 100%;
   }
   .titleAndGrid h1 {
     margin-bottom: 25px;

@@ -60,7 +60,7 @@
   .menuList {
     flex-direction: column;
     font-size: 1.5rem;
-    gap: 20px !important;
+    gap: 1.6rem !important;
     justify-content: center;
   }
   .logo {

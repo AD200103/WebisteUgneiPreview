@@ -32,6 +32,7 @@
   width: 100%;
   max-width: 400px;
   height: auto;
+  object-fit: cover;
 }
 .main h1:before {
   content: "";
@@ -54,6 +55,10 @@
 @media (max-width: 1024px) {
   .textBox {
     font-size: 1.2rem;
+  }
+  .labasBox img {
+    width: 100%;
+    max-width: 350px;
   }
   .idejaAtmosferaBox img {
     max-width: 500px;
