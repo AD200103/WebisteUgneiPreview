@@ -45,6 +45,27 @@ const Nuotraukos = () => {
     }
   };
 
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const difference = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+    if (difference > minSwipeDistance) {
+      // Swiped left → next photo
+      changeIntegerForward();
+    }
+    if (difference < -minSwipeDistance) {
+      // Swiped right → previous photo
+      changeIntegerBackward();
+    }
+    setTouchStart(null);
+  };
+
   useEffect(() => {
     arrCreation();
 
@@ -67,7 +88,11 @@ const Nuotraukos = () => {
         </button>
 
         {arr.length > 0 && (
-          <div className={styles.imgContainer}>
+          <div
+            className={styles.imgContainer}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
             <img src={`pics/${arr[firstInteger]}`} />
             <img className={styles.middlePic} src={`pics/${arr[integer]}`} />
             <img src={`pics/${arr[lastInteger]}`} />
