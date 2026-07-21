@@ -52,7 +52,18 @@
   border-radius: 50%;
   flex-shrink: 0;
 }
-
+@media (max-width: 916px) {
+  .logo {
+    width: 125px;
+    height: 125px;
+  }
+}
+@media (max-width: 769px) {
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
+}
 @media (max-width: 668px) {
   .virselis {
     filter: brightness(60%);
