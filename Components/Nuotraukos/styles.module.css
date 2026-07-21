@@ -70,6 +70,7 @@
   display: flex;
   align-items: center;
   gap: 0;
+  justify-content: center;
 }
 
 .middleSectionPics img {
@@ -138,13 +139,16 @@
     padding-bottom: 0;
   }
 
-  .middleSectionPics,
-  .middleSectionPics img {
+  .middleSectionPics {
     width: 100% !important;
     height: 410px !important;
     z-index: 0;
     position: unset;
     transform: unset;
+  }
+  .middleSectionPics img {
+    width: 100% !important;
+    height: 410px !important;
   }
 
   .imgContainer img:nth-child(1),

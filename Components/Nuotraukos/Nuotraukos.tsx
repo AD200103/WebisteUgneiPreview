@@ -95,10 +95,14 @@ const Nuotraukos = () => {
   }, []);
 
   useEffect(() => {
-    if (middleSectionRef.current) {
-      setSlideWidth(middleSectionRef.current.offsetWidth);
-    }
-  }, [arr]);
+    const element = middleSectionRef.current;
+    if (!element) return;
+    const observer = new ResizeObserver(() => {
+      setSlideWidth(element.offsetWidth);
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className={styles.content}>
