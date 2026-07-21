@@ -1,71 +1,21 @@
 import styles from "./styles.module.css";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/navigation";
 
 const Nuotraukos = () => {
   const [arr, setArr] = useState<string[]>([]);
-  const [integer, setInteger] = useState(0);
-  const [firstInteger, setFirstInteger] = useState(16);
-  const [lastInteger, setLastInteger] = useState(integer + 1);
 
   const arrCreation = () => {
     const stringArr: string[] = [];
+
     for (let i = 1; i < 18; i++) {
       stringArr.push(`foto (${i}).webp`);
     }
+
     setArr(stringArr);
-  };
-
-  const changeIntegerForward = () => {
-    const tick = integer + 1;
-    setFirstInteger(tick - 1);
-    setInteger(tick);
-    setLastInteger(tick + 1);
-    if (tick >= arr.length - 1) {
-      setLastInteger(tick - (arr.length - 1));
-    }
-    if (tick >= arr.length) {
-      setInteger(0);
-      setFirstInteger(arr.length - 1);
-      setLastInteger(1);
-    }
-  };
-  const changeIntegerBackward = () => {
-    const tick = integer - 1;
-    setFirstInteger(tick - 1);
-    setInteger(tick);
-    setLastInteger(tick + 1);
-
-    if (tick < 1) {
-      setFirstInteger(arr.length - 1);
-    }
-    if (tick < 0) {
-      setInteger(arr.length - 1);
-      setFirstInteger(arr.length - 2);
-      setLastInteger(0);
-    }
-  };
-
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.touches[0].clientX);
-  };
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStart === null) return;
-    const touchEnd = e.changedTouches[0].clientX;
-    const difference = touchStart - touchEnd;
-    const minSwipeDistance = 50;
-    if (difference > minSwipeDistance) {
-      // Swiped left → next photo
-      changeIntegerForward();
-    }
-    if (difference < -minSwipeDistance) {
-      // Swiped right → previous photo
-      changeIntegerBackward();
-    }
-    setTouchStart(null);
   };
 
   useEffect(() => {
@@ -80,40 +30,54 @@ const Nuotraukos = () => {
   return (
     <div className={styles.content}>
       <h1>Atmosfera renginiuose</h1>
-      <div className={styles.main}>
-        <button
-          onClick={() => {
-            changeIntegerBackward();
-          }}
-        >
-          &lt;
-        </button>
 
+      <div className={styles.main}>
         {arr.length > 0 && (
-          <div
-            className={styles.imgContainer}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            <img src={`pics/${arr[firstInteger]}`} />
+          <div className={styles.imgContainer}>
+            <button className="swiper-button-prev-custom">&lt;</button>
+
             <div className={styles.middleSection}>
-              <img src={`pics/${arr[firstInteger]}`} />
-              <img src={`pics/${arr[integer]}`} />
-              <img src={`pics/${arr[lastInteger]}`} />
+              <Swiper
+                modules={[Navigation]}
+                navigation={{
+                  prevEl: ".swiper-button-prev-custom",
+                  nextEl: ".swiper-button-next-custom",
+                }}
+                centeredSlides={true}
+                loop={true}
+                grabCursor={true}
+                speed={300}
+                spaceBetween={0}
+                slidesPerView={3}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  668: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 0,
+                  },
+                  1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 0,
+                  },
+                }}
+              >
+                {arr.map((photo) => (
+                  <SwiperSlide key={photo}>
+                    <img src={`pics/${photo}`} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-            <img src={`pics/${arr[lastInteger]}`} />
+
+            <button className="swiper-button-next-custom">&gt;</button>
           </div>
         )}
-
-        <button
-          onClick={() => {
-            changeIntegerForward();
-          }}
-        >
-          &gt;
-        </button>
       </div>
     </div>
   );
 };
+
 export default Nuotraukos;

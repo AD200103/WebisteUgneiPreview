@@ -6,10 +6,12 @@
   flex-direction: column;
   gap: 30px;
 }
+
 .content h1 {
   display: flex;
   align-items: center;
 }
+
 .content h1:before {
   content: "";
   display: flex;
@@ -17,15 +19,26 @@
   height: 15px;
   background-color: #f57b16;
 }
+
 .main {
   padding: 50px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
-.main button {
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* arrows */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
   all: unset;
   width: 50px;
   height: 150px;
@@ -34,130 +47,141 @@
   opacity: 0.5;
   text-align: center;
   font-size: 2rem;
-}
-.main button:hover {
-  opacity: 0.8;
   cursor: pointer;
-}
-.imgContainer {
-  display: flex;
-  gap: 100px;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.imgContainer img {
-  width: 500px;
-  height: 400px;
-  object-fit: cover;
+  z-index: 10;
 }
 
-.middleSection {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  width: 700px !important;
-  height: 600px !important;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  opacity: 0.8;
 }
-.middleSection img {
-  width: 100% !important;
-  height: 100% !important;
-  flex-shrink: 0;
+
+/* swiper container */
+.middleSection {
+  width: 900px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.middleSection :global(.swiper) {
+  width: 100%;
+  height: 100%;
+}
+
+.middleSection :global(.swiper-wrapper) {
+  align-items: center;
+}
+
+.middleSection :global(.swiper-slide) {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleSection :global(.swiper-slide img) {
+  width: 300px !important;
+  height: 80%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* active image */
+.middleSection :global(.swiper-slide-active img) {
+  width: 600px !important;
+  height: 100%;
+  z-index: 2;
 }
 
 @media (max-width: 1024px) {
   .content h1 {
     padding-left: 50px;
   }
+
   .middleSection {
-    width: 580px !important;
-    height: 500px !important;
+    width: 580px;
+    height: 500px;
   }
-  .imgContainer img {
-    width: 300px;
-    height: 300px;
-  }
+
   .content {
     padding-left: 0;
     padding-right: 0;
   }
+
   .main {
-    padding: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding: 0;
   }
+
   .content h1 {
     margin-bottom: 50px;
   }
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    width: 40px;
+  }
 }
+
 @media (max-width: 768px) {
   .middleSection {
-    width: 530px !important;
-    height: 500px !important;
-  }
-  .imgContainer img {
-    width: 280px;
+    width: 530px;
+    height: 500px;
   }
 }
+
 @media (max-width: 668px) {
   .content {
     font-size: 1.2rem;
     gap: 20px;
-    padding: 0px;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-    z-index: 0;
-    height: fit-content;
+    padding: 3rem 0;
   }
 
   .content h1 {
     font-size: 1.7em;
-    margin-bottom: 0px;
-    padding-left: 0px;
+    padding-left: 0;
   }
+
   .imgContainer {
     width: 100%;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
+    gap: 0;
+  }
+
+  .middleSection .swiper-slide {
+    transform: scale(1);
+  }
+
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    width: 30px;
+    height: 100px;
+    position: absolute;
+  }
+
+  .swiper-button-prev-custom {
+    left: 0;
+  }
+
+  .swiper-button-next-custom {
+    right: 0;
+  }
+
+  .content h1:before {
+    width: 35px;
   }
 
   .middleSection {
-    width: 100% !important;
-    height: 410px !important;
-    z-index: 0;
-    position: unset;
-    transform: unset;
+    width: 100%;
+    height: 410px;
   }
 
-  .imgContainer img:nth-child(1),
-  .imgContainer img:nth-child(3) {
+  .middleSection :global(.swiper-slide img),
+  .middleSection :global(.swiper-slide-active img) {
+    width: 100%;
+    height: 410px;
+  }
+
+  .middleSection :global(.swiper-slide:not(.swiper-slide-active)) {
     display: none;
-  }
-  .imgContainer {
-    position: relative;
-  }
-  .main {
-    padding: 0px;
-    height: unset;
-  }
-  .main button:nth-child(1),
-  .main button:nth-child(2) {
-    width: 30px;
-    position: absolute;
-    left: 0px;
-    z-index: 10;
-  }
-  .main button:nth-child(3) {
-    width: 30px;
-    position: absolute;
-    right: 0px;
-    z-index: 10;
-  }
-  .content h1:before {
-    width: 35px;
   }
 }
