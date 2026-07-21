@@ -117,6 +117,21 @@
     width: 180px;
   }
 }
+@media (max-width: 889px) {
+  .serviceBox img,
+  .serviceBox,
+  .serviceBox h3 {
+    width: 100px;
+    height: 100px;
+  }
+  .contentBox {
+    gap: 6%;
+  }
+  .contentBox h3 {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .contentBox h3 {
     font-size: 1.1rem;
