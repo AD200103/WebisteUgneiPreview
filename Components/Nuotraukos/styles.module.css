@@ -85,13 +85,14 @@
   object-fit: cover;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  z-index: 0;
 }
 
 /* active image */
 .middleSection :global(.swiper-slide-active img) {
   width: 700px !important;
   height: 100%;
-  z-index: 2;
+  z-index: 100000;
 }
 
 @media (max-width: 1024px) {
@@ -203,11 +204,9 @@
   }
   .middleSection :global(.swiper-slide-active img) {
     width: 100% !important;
-    z-index: 100000;
   }
   .middleSection :global(.swiper-slide img) {
     width: 100% !important;
-    z-index: 0;
   }
   .middleSection :global(.swiper-slide img),
   .middleSection :global(.swiper-slide-active img) {
