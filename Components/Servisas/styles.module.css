@@ -76,6 +76,18 @@
 .titleAndGrid h1 {
   margin-bottom: 10px;
 }
+@media (max-width: 1440) {
+  .contentBox h3 {
+    font-size: 1.5rem;
+  }
+  .contentBox {
+    gap: 5%;
+    column-gap: 10px;
+  }
+  .contentBox > .serviceBox:nth-child(3) {
+    width: 200px;
+  }
+}
 @media (max-width: 1024px) {
   .main {
     height: fit-content;
