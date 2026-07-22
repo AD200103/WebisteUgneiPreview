@@ -207,6 +207,7 @@
   }
   .middleSection :global(.swiper-slide img) {
     width: 100% !important;
+    z-index: 0;
   }
   .middleSection :global(.swiper-slide img),
   .middleSection :global(.swiper-slide-active img) {
