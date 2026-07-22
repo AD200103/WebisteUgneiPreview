@@ -58,10 +58,13 @@ const Nuotraukos = () => {
                     spaceBetween: 0,
                   },
                   668: {
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                  },
+                  768: {
                     slidesPerView: 2.2,
                     spaceBetween: 0,
                   },
-
                   1500: {
                     spaceBetween: 0,
                     slidesPerView: 2.2,
