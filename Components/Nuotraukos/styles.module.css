@@ -110,6 +110,7 @@
   .content {
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
   }
 
   .main {
@@ -117,7 +118,7 @@
   }
 
   .content h1 {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
   }
 
   .swiper-button-prev-custom,
@@ -147,6 +148,9 @@
   .middleSection :global(.swiper-slide-active img) {
     width: 500px !important;
   }
+  .content h1 {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 668px) {
@@ -154,6 +158,7 @@
     font-size: 1.2rem;
     gap: 20px;
     padding: 3rem 0;
+    padding-bottom: 0;
   }
   .swiperButtonPrevCustom,
   .swiperButtonNextCustom {
@@ -215,5 +220,10 @@
   .middleSection :global(.swiper-slide-active img) {
     width: 100%;
     height: 520px !important ;
+  }
+}
+@media (max-width: 450px) {
+  .content {
+    padding-bottom: 3rem;
   }
 }
