@@ -7,7 +7,6 @@ import "swiper/css/navigation";
 
 const Nuotraukos = () => {
   const [arr, setArr] = useState<string[]>([]);
-
   const arrCreation = () => {
     const stringArr: string[] = [];
 
@@ -34,7 +33,11 @@ const Nuotraukos = () => {
       <div className={styles.main}>
         {arr.length > 0 && (
           <div className={styles.imgContainer}>
-            <button className="swiper-button-prev-custom">&lt;</button>
+            <button
+              className={`${styles.swiperButtonPrevCustom} swiper-button-prev-custom`}
+            >
+              &lt;
+            </button>
 
             <div className={styles.middleSection}>
               <Swiper
@@ -58,9 +61,10 @@ const Nuotraukos = () => {
                     slidesPerView: 2.2,
                     spaceBetween: 0,
                   },
-                  1024: {
-                    slidesPerView: 2.5,
+
+                  1500: {
                     spaceBetween: 0,
+                    slidesPerView: 2.2,
                   },
                 }}
               >
@@ -72,7 +76,11 @@ const Nuotraukos = () => {
               </Swiper>
             </div>
 
-            <button className="swiper-button-next-custom">&gt;</button>
+            <button
+              className={`${styles.swiperButtonNextCustom} swiper-button-next-custom`}
+            >
+              &gt;
+            </button>
           </div>
         )}
       </div>
