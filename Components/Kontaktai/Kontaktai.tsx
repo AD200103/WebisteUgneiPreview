@@ -38,6 +38,10 @@ const Kontaktai = () => {
           <p>+37060802009</p>
           <img className={styles.copyIm} src={"contactsPics/copy.svg"} />
         </div>
+        <div className={styles.secBox}>
+          <img src={"contactsPics/phone.svg"} />
+          <p>INSTAGRAM</p>
+        </div>
       </div>
       <div className={`${styles.coppiedBox} ${visible && styles.ative}`}>
         <img

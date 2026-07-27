@@ -17,8 +17,11 @@
 .contactBox {
   display: flex;
   gap: 20px;
-  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
+
 .contactBox img {
   width: 80px;
   height: 60px;
@@ -80,6 +83,9 @@
 @media (max-width: 770px) {
   .coppiedBox {
     display: none;
+  }
+  .secBox {
+    width: 100%;
   }
 }
 @media (max-width: 431px) {
