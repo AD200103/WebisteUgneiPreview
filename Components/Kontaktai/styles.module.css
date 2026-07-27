@@ -1,7 +1,6 @@
 .main {
   width: 100%;
   background-color: #f57b16;
-
   padding: 50px;
   font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -34,6 +33,17 @@
   gap: 10px;
   background-color: rgba(200, 71, 28, 0.557);
   padding: 20px;
+}
+
+.contactBox a p {
+  width: 100%;
+  margin-right: 40px;
+  text-align: Center;
+  color: white;
+}
+.contactBox a {
+  all: unset;
+  color: white;
 }
 .secBox:hover {
   background-color: rgb(200, 71, 28);
@@ -79,18 +89,26 @@
     width: 60px;
     height: 40px;
   }
+  .contactBox {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 @media (max-width: 770px) {
   .coppiedBox {
     display: none;
   }
-  .secBox {
-    width: 100%;
+}
+@media (max-width: 504px) {
+  .secBox,
+  .contactBox a {
+    width: 100% !important;
   }
 }
 @media (max-width: 431px) {
   .main {
-    padding: 0;
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 1.2rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -105,9 +123,6 @@
     width: 100%;
     padding-right: 50px;
     padding-left: 50px;
-  }
-  .secBox {
-    width: 300px;
   }
 }
 @media (max-width: 377px) {
