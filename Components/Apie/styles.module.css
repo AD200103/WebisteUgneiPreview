@@ -52,6 +52,12 @@
   width: 100%;
   text-align: justify;
 }
+.textBox h1 {
+  margin-bottom: 10px;
+}
+.textBox p {
+  hyphens: auto;
+}
 @media (max-width: 1440px) {
   .textBox {
     font-size: 1.8rem;
