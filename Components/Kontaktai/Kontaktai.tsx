@@ -49,6 +49,7 @@ const Kontaktai = () => {
               src={"contactsPics/instagram.svg"}
             />
             <p>INSTAGRAM</p>
+            <div className={styles.hidBox}></div>
           </div>
         </a>
       </div>
