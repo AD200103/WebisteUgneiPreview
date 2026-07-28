@@ -249,13 +249,21 @@
     height: 60px !important;
     width: 60px !important;
   }
+  .titleAndGrid h1 {
+    font-size: 1.5em !important;
+  }
 }
 @media (max-width: 456px) {
   .contentBox h3 {
     font-size: 1rem;
   }
-  .titleAndGrid h1 {
-    font-size: 1.5em !important;
+  .serviceBox,
+  .contentBox > .serviceBox:nth-child(3) {
+    width: 70%;
+  }
+  .titleAndGrid {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
@@ -263,19 +271,17 @@
   .contentBox {
     margin: 0;
   }
+  .serviceBox,
+  .contentBox > .serviceBox:nth-child(3) {
+    width: 82%;
+  }
+}
+
+@media (max-width: 361px) {
 }
 @media (max-width: 322px) {
   .contentBox {
     gap: 20px;
     column-gap: 0px;
-  }
-  .titleAndGrid {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-@media (max-width: 361px) {
-  .contentBox h3 {
-    font-size: 0.8rem;
   }
 }
