@@ -184,13 +184,13 @@
   .serviceBox {
     width: 100%;
     flex-direction: row;
-    background-color: #d06d1c;
+    background-color: rgba(200, 71, 28, 0.557);
     padding: 10px;
     justify-content: space-between;
   }
 
   .serviceBox img {
-    background-color: #d58646;
+    background-color: rgba(200, 71, 28, 0.847);
     padding: 5px;
   }
   .serviceBox h3 {
