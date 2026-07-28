@@ -237,11 +237,20 @@
     font-size: 1.2rem;
   }
 }
-@media (max-width: 456px) {
+@media (max-width: 504px) {
+  .serviceBox,
+  .contentBox > .serviceBox:nth-child(3) {
+    width: 75%;
+  }
+  .contentBox h3 {
+    font-size: 1rem;
+  }
   .main .serviceIcon {
     height: 60px !important;
     width: 60px !important;
   }
+}
+@media (max-width: 456px) {
   .contentBox h3 {
     font-size: 1rem;
   }
@@ -249,6 +258,7 @@
     font-size: 1.5em !important;
   }
 }
+
 @media (max-width: 377px) {
   .contentBox {
     margin: 0;
@@ -262,5 +272,10 @@
   .titleAndGrid {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+@media (max-width: 361px) {
+  .contentBox h3 {
+    font-size: 0.8rem;
   }
 }
