@@ -24,7 +24,7 @@ const Kontaktai = () => {
           }}
           className={styles.secBox}
         >
-          <img src={"contactsPics/mail.svg"} />
+          <img className={styles.secIcon} src={"contactsPics/mail.svg"} />
           <p>renginiai@atmosferai.lt</p>
           <img className={styles.copyIm} src={"contactsPics/copy.svg"} />
         </div>
@@ -34,7 +34,7 @@ const Kontaktai = () => {
           }}
           className={styles.secBox}
         >
-          <img src={"contactsPics/phone.svg"} />
+          <img className={styles.secIcon} src={"contactsPics/phone.svg"} />
           <p>+37060802009</p>
           <img className={styles.copyIm} src={"contactsPics/copy.svg"} />
         </div>
@@ -44,7 +44,10 @@ const Kontaktai = () => {
           }
         >
           <div className={styles.secBox}>
-            <img src={"contactsPics/instagram.svg"} />
+            <img
+              className={styles.secIcon}
+              src={"contactsPics/instagram.svg"}
+            />
             <p>INSTAGRAM</p>
           </div>
         </a>

@@ -102,10 +102,31 @@
 @media (max-width: 504px) {
   .secBox,
   .contactBox a {
+    width: 75% !important;
+  }
+  a .secBox {
     width: 100% !important;
   }
+  .secBox p {
+    font-size: 1rem;
+  }
+  .main h1 {
+    font-size: 1.6rem !important;
+    text-align: center;
+  }
+  .contactBox {
+    align-items: center;
+  }
+  .secIcon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .copyIm {
+    width: 15px !important;
+    height: 15px !important;
+  }
 }
-@media (max-width: 431px) {
+@media (max-width: 450px) {
   .main {
     padding-right: 10px;
     padding-left: 10px;
@@ -116,6 +137,10 @@
     align-items: center;
     width: 100%;
     margin-top: 0;
+  }
+  .secBox,
+  .contactBox a {
+    width: 70% !important;
   }
   .main h1 {
     font-size: 1.7em;
@@ -128,6 +153,10 @@
 @media (max-width: 377px) {
   .main {
     align-items: center;
+  }
+  .secBox,
+  .contactBox a {
+    width: 82% !important;
   }
 }
 @media (max-width: 322px) {
