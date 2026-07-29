@@ -10,7 +10,7 @@ const Nuotraukos = () => {
   const arrCreation = () => {
     const stringArr: string[] = [];
 
-    for (let i = 1; i < 18; i++) {
+    for (let i = 1; i < 21; i++) {
       stringArr.push(`foto (${i}).webp`);
     }
 
