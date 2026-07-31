@@ -14,10 +14,10 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 80px;
+  column-gap: 80px;
   place-items: center;
-  width: 80%;
-  column-gap: 0px;
 }
+
 .contentBox > .serviceBox:nth-child(3) {
   grid-column: 2;
   grid-row: 1 / 3;
@@ -81,8 +81,7 @@
     font-size: 1.5rem;
   }
   .contentBox {
-    gap: 5%;
-    column-gap: 10px;
+    column-gap: 30px;
   }
   .contentBox > .serviceBox:nth-child(3) {
     width: 200px;
@@ -113,7 +112,6 @@
   }
   .contentBox {
     row-gap: 40px !important;
-    gap: 6%;
   }
   .sectPicAndDescBox {
     border-top-left-radius: 9999px;
@@ -139,9 +137,7 @@
   .titleAndGrid h1 {
     margin-bottom: 30px;
   }
-  .contentBox {
-    gap: 6%;
-  }
+
   .contentBox h3 {
     font-size: 0.9rem;
   }
@@ -151,9 +147,6 @@
   .main .serviceIcon {
     height: 75px;
     width: 75px;
-  }
-  .contentBox {
-    gap: 1%;
   }
 }
 @media (max-width: 668px) {
