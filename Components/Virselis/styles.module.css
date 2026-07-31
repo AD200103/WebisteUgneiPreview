@@ -36,7 +36,7 @@
   height: fit-content;
   justify-content: space-around;
   align-items: center;
-  width: 90%;
+  width: 80%;
   font-size: clamp(1.3rem, 2vw, 2rem);
 }
 .menuList li {
@@ -57,13 +57,18 @@
     height: 125px;
   }
 }
+@media (max-width: 810px) {
+  .menuList {
+    font-size: clamp(1.1rem, 2vw, 1.7rem);
+  }
+}
 @media (max-width: 769px) {
   .logo {
     width: 200px;
     height: 200px;
   }
   .menuList {
-    font-size: clamp(1.1rem, 2vw, 1.7rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
   }
 }
 @media (max-width: 668px) {
