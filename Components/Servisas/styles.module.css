@@ -15,7 +15,7 @@
   grid-template-rows: 1fr 1fr;
   gap: 80px;
   place-items: center;
-  width: 100%;
+  width: 80%;
   column-gap: 0px;
 }
 .contentBox > .serviceBox:nth-child(3) {
@@ -93,7 +93,7 @@
     height: fit-content;
   }
   .titleAndGrid h1 {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
   .titleAndGrid {
     padding-top: 20px;
