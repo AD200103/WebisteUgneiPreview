@@ -5,15 +5,8 @@ import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
 const Main = () => {
-  return (
-    <>
-      <Virselis />
-      <Apie />
-      <Servisas />
-      <Nuotraukos />
-      <Kontaktai />
-      <ScrollToTopBtn />
-    </>
+  return (<p>Vyksta puslapio darbai</p>
+    
   );
 };
 export default Main;
