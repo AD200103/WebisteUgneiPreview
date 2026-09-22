@@ -1,6 +1,9 @@
 import styles from "./styles.module.css";
 import { useState } from "react";
-const Slaptazodis = ({ setVisible }) => {
+import React from "react";
+const Slaptazodis = ({
+  setVisible,
+}: React.Dispatch<React.SetStateAction<boolean>>) => {
   const [input, setInput] = useState("");
   const password = "ugnelici";
   const changeInputValue = (event) => {
