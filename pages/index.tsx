@@ -6,10 +6,13 @@ import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
 import Remontas from "../Components/Remontas/Remontas";
 import Slaptazodis from "../Components/Slaptazodis/Slaptazodis";
+import { useState } from "react";
 const Main = () => {
   const trueThing = true;
+  const [visible, setVisible] = useState(false);
+
   return trueThing ? (
-    <Slaptazodis />
+    <Slaptazodis visible={visible} setVisible={setVisible} />
   ) : (
     <>
       <Virselis />
