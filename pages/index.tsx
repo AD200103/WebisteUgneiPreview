@@ -4,13 +4,13 @@ import Servisas from "../Components/Servisas/Servisas";
 import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
-import Slaptazodis from "../Components/Slaptazodis/Slaptazodis";
-import { useState } from "react";
-const Main = () => {
-  const [notvisible, setVisible] = useState(true);
+import Remontas from "@/Components/Remontas/Remontas";
 
-  return notvisible ? (
-    <Slaptazodis setVisible={setVisible} />
+const Main = () => {
+  const notVisible = true;
+
+  return notVisible ? (
+    <Remontas />
   ) : (
     <>
       <Virselis />
