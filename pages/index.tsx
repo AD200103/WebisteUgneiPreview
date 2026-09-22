@@ -5,8 +5,13 @@ import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
 import Remontas from "../Components/Remontas/Remontas";
+
 const Main = () => {
-  return <>
+  const trueThing = true;
+  return trueThing ? (
+    <Remontas />
+  ) : (
+    <>
       <Virselis />
       <Apie />
       <Servisas />
@@ -14,5 +19,6 @@ const Main = () => {
       <Kontaktai />
       <ScrollToTopBtn />
     </>
+  );
 };
 export default Main;
