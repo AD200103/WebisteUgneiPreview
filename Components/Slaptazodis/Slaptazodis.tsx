@@ -1,4 +1,4 @@
-import styles from "../Slaptazodis/styles";
+import styles from "./styles.module.css";
 const Slaptazodis = () => {
   return <div className={styles.main}></div>;
 };
