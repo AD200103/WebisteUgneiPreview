@@ -1,9 +1,30 @@
 import styles from "./styles.module.css";
-const Slaptazodis = () => {
+import { useState } from "react";
+const Slaptazodis = ({ setVisible }) => {
+  const [input, setInput] = useState("");
+  const password = "ugnelici";
+  const changeInputValue = (event) => {
+    setInput(event.target.value);
+  };
+  const setVisibleContent = () => {
+    if (input === password) {
+      setVisible(false);
+    } else {
+      return;
+    }
+  };
   return (
     <div className={styles.main}>
       <div className={styles.form}>
-        <button type="submit">Enter</button>
+        <input
+          type="password"
+          value={input}
+          onChange={changeInputValue}
+          placeholder="Enter password"
+        />
+        <button onClick={setVisibleContent} type="submit">
+          Enter
+        </button>
       </div>
     </div>
   );
