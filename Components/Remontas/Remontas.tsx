@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 const Remontas = () => {
   return (
     <div className={styles.main}>
-      <h1>Vyksta remonto darbai</h1>
+      <h1>Puslapis laikinai tvarkomas</h1>
     </div>
   );
 };

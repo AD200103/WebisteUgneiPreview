@@ -12,7 +12,7 @@ const Main = () => {
   const [visible, setVisible] = useState(false);
 
   return trueThing ? (
-    <Slaptazodis visible={visible} setVisible={setVisible} />
+    <Remontas />
   ) : (
     <>
       <Virselis />
