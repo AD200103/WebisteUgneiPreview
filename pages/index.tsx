@@ -5,11 +5,11 @@ import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
 import Remontas from "../Components/Remontas/Remontas";
-
+import Slaptazodis from "../Components/Slaptazodis/Slaptazodis";
 const Main = () => {
   const trueThing = true;
   return trueThing ? (
-    <Remontas />
+    <Slaptazodis />
   ) : (
     <>
       <Virselis />
