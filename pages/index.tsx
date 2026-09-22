@@ -4,9 +4,8 @@ import Servisas from "../Components/Servisas/Servisas";
 import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
+import Remontas from "../Components/Remontas/Remontas";
 const Main = () => {
-  return (<p>Vyksta puslapio darbai</p>
-    
-  );
+  return <Remontas/>
 };
 export default Main;
