@@ -7,7 +7,7 @@ import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
 import Remontas from "@/Components/Remontas/Remontas";
 
 const Main = () => {
-  const notVisible = true;
+  const notVisible = false;
 
   return notVisible ? (
     <Remontas />
