@@ -1,6 +1,6 @@
 import styles from "./styles.module.css";
 import { useState } from "react";
-const Slaptazodis = ({ visible, setVisible }) => {
+const Slaptazodis = () => {
   const [inputVal, setInputVal] = useState("");
   return (
     <div className={styles.main}>
