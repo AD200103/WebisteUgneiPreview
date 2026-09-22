@@ -3,3 +3,4 @@ const Remontas = () =>{
     <h1>Vyksta remonto darbai</h1>
   </div>
 }
+export default Remontas
