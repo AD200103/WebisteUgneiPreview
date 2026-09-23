@@ -1,6 +1,10 @@
 import styles from "./styles.module.css";
 import { useState } from "react";
-const Slaptazodis = ({ setVisible }) => {
+type Props = {
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Slaptazodis = ({ setVisible }: Props) => {
   const [input, setInput] = useState("");
   const pass = "ugnelici";
   const [placeHolder, setPlaceHolder] = useState("Slaptažodis");
