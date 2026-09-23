@@ -35,11 +35,11 @@ const Slaptazodis = ({ setVisible }: Props) => {
     }
   };
 
-  const formSubmission = (event) => {
+  const formSubmission = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     veryfyPass();
   };
-  const changeInputVal = (event) => {
+  const changeInputVal = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInput(event.target.value);
   };
 
