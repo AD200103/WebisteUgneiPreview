@@ -4,7 +4,7 @@ const Remontas = () => {
     <div className={styles.main}>
       <div className={styles.message}>
         <h1>Puslapis laikinai tvarkomas</h1>
-        <p>Mūsų puslapis šiuo metu yra tvarkomas. Greitai sugrįšime!</p>
+        <p>Greitai sugrįšime!</p>
       </div>
     </div>
   );

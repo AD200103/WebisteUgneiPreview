@@ -8,8 +8,10 @@ import Remontas from "@/Components/Remontas/Remontas";
 import Slaptazodis from "@/Components/Slaptazodis/Slaptazodis";
 import { useState, useEffect } from "react";
 const Main = () => {
+  //<Slaptazodis setVisible={setVisible} />
+  //<Remontas />
   const [notVisible, setVisible] = useState(true);
-  //const [pass, setPass] = useState("");
+  // const [pass, setPass] = useState("");
   // useEffect(() => {
   //   const passVal = localStorage.getItem("pass") ?? "";
   //   setPass(passVal);
