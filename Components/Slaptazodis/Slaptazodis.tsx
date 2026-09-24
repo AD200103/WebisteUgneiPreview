@@ -46,7 +46,7 @@ const Slaptazodis = ({ setVisible }: Props) => {
   return (
     <div className={styles.main}>
       <div className={styles.formContent}>
-        <h1>Iveskite slaptažodį</h1>
+        <h1>Įveskite slaptažodį</h1>
         <form className={styles.formContainer} onSubmit={formSubmission}>
           <input
             className={styles.password}
