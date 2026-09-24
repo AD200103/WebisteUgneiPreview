@@ -9,18 +9,17 @@ import Slaptazodis from "@/Components/Slaptazodis/Slaptazodis";
 import { useState, useEffect } from "react";
 const Main = () => {
   const [notVisible, setVisible] = useState(true);
-  const [pass, setPass] = useState("");
-
-  useEffect(() => {
-    const passVal = localStorage.getItem("pass") ?? "";
-    setPass(passVal);
-    if (pass) {
-      setVisible(false);
-    }
-  });
+  //const [pass, setPass] = useState("");
+  // useEffect(() => {
+  //   const passVal = localStorage.getItem("pass") ?? "";
+  //   setPass(passVal);
+  //   if (pass) {
+  //     setVisible(false);
+  //   }
+  // });
 
   return notVisible ? (
-    <Slaptazodis setVisible={setVisible} />
+    <Remontas />
   ) : (
     <>
       <Virselis />
