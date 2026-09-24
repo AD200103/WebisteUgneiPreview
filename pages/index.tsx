@@ -4,12 +4,23 @@ import Servisas from "../Components/Servisas/Servisas";
 import Nuotraukos from "../Components/Nuotraukos/Nuotraukos";
 import Kontaktai from "../Components/Kontaktai/Kontaktai";
 import ScrollToTopBtn from "../Components/ScrollToTopBtn/ScrollToTopBtn";
-import Remontas from "../Components/Remontas/Remontas";
-import Slaptazodis from "../Components/Slaptazodis/Slaptazodis";
+import Remontas from "@/Components/Remontas/Remontas";
+import Slaptazodis from "@/Components/Slaptazodis/Slaptazodis";
+import { useState, useEffect } from "react";
 const Main = () => {
-  const trueThing = true;
-  return trueThing ? (
-    <Slaptazodis />
+  const [notVisible, setVisible] = useState(true);
+  const [pass, setPass] = useState("");
+
+  useEffect(() => {
+    const passVal = localStorage.getItem("pass") ?? "";
+    setPass(passVal);
+    if (pass) {
+      setVisible(false);
+    }
+  });
+
+  return notVisible ? (
+    <Slaptazodis setVisible={setVisible} />
   ) : (
     <>
       <Virselis />
