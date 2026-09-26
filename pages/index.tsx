@@ -26,8 +26,8 @@ const Main = () => {
   ) : (
     <>
       <LiquidReveal
-        topImage="\celebratoryBackTo2.gif"
-        bottomImage="\celebratoryBack.png"
+        topImage="\grayGifTop.gif"
+        bottomImage="\orangeBottom.webp"
       />
       <Virselis />
       <Apie />
