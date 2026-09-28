@@ -25,10 +25,7 @@ const Main = () => {
     <Slaptazodis setVisible={setVisible} />
   ) : (
     <>
-      <LiquidReveal
-        topImage="\grayGifTop.gif"
-        bottomImage="\orangeBottom.webp"
-      />
+      <LiquidReveal topImage="\grayTop.gif" bottomImage="\orange.webp" />
       <Virselis />
       <Apie />
       <Servisas />
