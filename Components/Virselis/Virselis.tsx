@@ -8,7 +8,7 @@ const Virselis = () => {
   return (
     <div className={`${styles.main} ${show && styles.mainShow} `}>
       <img className={styles.virselis} src="/pics/virselis.webp" />
-      <img className={styles.logo} src="/pics/logo.png" />
+      <img className={styles.logo} src="/pics/logo.svg" />
       <ul className={styles.menuList}>
         <li>KONCEPTO KŪRIMAS</li>
         <li className={styles.menuDot}></li>
